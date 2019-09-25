@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Sistema d'encriptació J-A</title>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
+		input {
+			width: 95%;
+			height: 30px;
+			border: 0.5;
+			font-family: Helvetica, sans-serif;
+			font-size: 25px;
+			margin-top: 15px;
+			margin-bottom: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+
+		}
+		button {
+			width: 95%;
+			height: 30px;
+			
+		}
+		.info {
+			font-family: Helvetica, sans-serif;
+			font-size: 15px;
+		}
+		.final {
+			font-family: Helvetica, sans-serif;
+			font-size: 25px;
+			font-weight: 500;
+
+		}
+
+	</style>
 </head>
 <body>
-
+<center>
+	<p class="info">Misssatge a encriptar:</p>
 	<input type="text" name="entrada" id="in">
+	<p class="info">Nombre clau:</p>
 	<input type="text" name="numero" id="num">
 	<button onclick="Encriptar()">Encriptar</button>
 
-<p id="out"></p>
+<p id="out" class="final"></p>
+</center>
 <script type="text/javascript">
 	function Encriptar() {
 		var t_in = document.getElementById("in").value;
