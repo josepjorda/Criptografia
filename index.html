@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<input type="text" name="entrada" id="in">
+	<input type="text" name="numero" id="num">
+	<button onclick="Encriptar()">Encriptar</button>
+
+<p id="out"></p>
+<script type="text/javascript">
+	function Encriptar() {
+		var t_in = document.getElementById("in").value;
+		var t_num = document.getElementById("num");
+		var t_out = document.getElementById("out");
+
+		
+		var v02 = t_in.replace(/a/g, "@");
+		var variable = v02;
+		var v03 = variable.replace(/b/g, "#");
+		var variable = v03;
+		var v04 = variable.replace(/c/g, "&");
+		var variable = v04;
+		var v05 = variable.replace(/d/g, "$");
+		var variable = v05;
+		var v06 = variable.replace(/e/g, "€");
+		var variable = v06;
+		var v07 = variable.replace(/f/g, "/");
+		var variable = v07;
+		var v08 = variable.replace(/g/g, "=");
+		var variable = v08;
+		var v09 = variable.replace(/h/g, "¿");
+		var variable = v09;
+		var v10 = variable.replace(/i/g, "¡");
+		var variable = v10;
+		var v11 = variable.replace(/j/g, "-");
+		var variable = v11;
+		var v12 = variable.replace(/k/g, "(");
+		var variable = v12;
+		var v13 = variable.replace(/l/g, ")");
+		var variable = v13;
+		var v14 = variable.replace(/m/g, "%");
+		var variable = v14;
+		var v15 = variable.replace(/n/g, "0");
+		var variable = v15;
+		var v16 = variable.replace(/o/g, "1");
+		var variable = v16;
+		var v17 = variable.replace(/p/g, "2");
+		var variable = v17;
+		var v18 = variable.replace(/q/g, "3");
+		var variable = v18;
+		var v19 = variable.replace(/r/g, "4");
+		var variable = v19;
+		var v20 = variable.replace(/s/g, "5");
+		var variable = v20;
+		var v21 = variable.replace(/t/g, "6");
+		var variable = v21;
+		var v22 = variable.replace(/u/g, "7");
+		var variable = v22;
+		var v23 = variable.replace(/v/g, "8");
+		var variable = v23;
+		var v24 = variable.replace(/w/g, "9");
+		var variable = v24;
+		var v25 = variable.replace(/x/g, "!");
+		var variable = v25;
+		var v26 = variable.replace(/y/g, "?");
+		var variable = v26;
+		var v27 = variable.replace(/z/g, "+");
+		var variable = v27;
+		
+
+    "use strict";
+    var a = variable;
+    var b = document.getElementById("num").value;
+    var uc_a = "@#&$€/=¿¡-()%0123456789?!+", 
+        z;
+    b = Number(b); // how many rotations
+    c = 0; // 0: shift forward || 1: shift backward
+
+
+    	 if (typeof a === "string") {
+        z = a.split(""); // a is input string; z is a to array of chars
+        uc_a = uc_a.split(""); // uppercase alphabets to array of chars
+        
+        // shifting each letter
+        z.forEach(function (v, i) {
+
+            var rui;
+            // matching and shifting uppercase [rui]
+            uc_a.forEach(function (iv, ii) {
+
+                if (v === iv) {
+                    if (c === 0) { // forward shift
+                        rui = ii + b; 
+                         // normal shift
+                       
+                        z[i] = uc_a[rui]; // the uppercase forward shift/rotation
+                    }
+
+			 x = z.join("");
+		
+						 
+			}
+		}) 
+		})}
+console.log(x);
+document.getElementById("out").innerHTML = x;
+    }
+
+
+
+			
+</script>
+</body>
+</html>
