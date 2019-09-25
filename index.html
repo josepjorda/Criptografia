@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>Sistema d'encriptació J-A</title>
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" />
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 	<style type="text/css">
 		body {
 			margin: 0;
-			padding: 0;
+			padding-top: 15px;
 		}
 		input {
 			width: 95%;
@@ -20,18 +22,19 @@
 
 		}
 		button {
-			width: 95%;
-			height: 30px;
+			margin-top: 15px;
+			margin-bottom: 15px;
 			
 		}
 		.info {
-			font-family: Helvetica, sans-serif;
+			font-family: "Helvetica", sans-serif;
 			font-size: 15px;
 		}
 		.final {
-			font-family: Helvetica, sans-serif;
+			font-family: "Helvetica", sans-serif;
 			font-size: 25px;
 			font-weight: 500;
+			margin-top: 25px;
 
 		}
 
@@ -39,11 +42,27 @@
 </head>
 <body>
 <center>
-	<p class="info">Misssatge a encriptar:</p>
-	<input type="text" name="entrada" id="in">
-	<p class="info">Nombre clau:</p>
-	<input type="text" name="numero" id="num">
-	<button onclick="Encriptar()">Encriptar</button>
+	
+	<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="in">
+    <label class="mdl-textfield__label" for="in">Missatge a encriptar...</label>
+  </div>
+</form>
+	
+	
+	<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="num">
+    <label class="mdl-textfield__label" for="num">Nombre clau...</label>
+    <span class="mdl-textfield__error">No és un número.</span>
+  </div>
+</form>
+	<!-- Colored raised button -->
+<button onclick="Encriptar()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  Encriptar
+</button>
+	
 
 <p id="out" class="final"></p>
 </center>
