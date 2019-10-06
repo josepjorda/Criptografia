@@ -26,10 +26,6 @@
 			margin-bottom: 15px;
 			
 		}
-		.info {
-			font-family: "Helvetica", sans-serif;
-			font-size: 15px;
-		}
 		.final {
 			font-family: "Helvetica", sans-serif;
 			font-size: 25px;
@@ -58,7 +54,7 @@
     <span class="mdl-textfield__error">No és un número.</span>
   </div>
 </form>
-	<!-- Colored raised button -->
+	
 <button onclick="Encriptar()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
   Encriptar
 </button>
@@ -148,37 +144,38 @@
     var b = document.getElementById("num").value;
     var uc_a = "@#&$€/=¿¡-()%0123456789?!+", 
         z;
-    b = Number(b); // how many rotations
-    c = 0; // 0: shift forward || 1: shift backward
+    b = Number(b); 
+    c = 0; 
 
 
     	 if (typeof a === "string") {
-        z = a.split(""); // a is input string; z is a to array of chars
-        uc_a = uc_a.split(""); // uppercase alphabets to array of chars
+        z = a.split(""); 
+        uc_a = uc_a.split(""); 
         
-        // shifting each letter
+        
         z.forEach(function (v, i) {
 
             var rui;
-            // matching and shifting uppercase [rui]
+            
             uc_a.forEach(function (iv, ii) {
 
                 if (v === iv) {
-                    if (c === 0) { // forward shift
+                    if (c === 0) { 
                         rui = ii + b; 
-                         // normal shift
+                         
                        
-                        z[i] = uc_a[rui]; // the uppercase forward shift/rotation
+                        z[i] = uc_a[rui]; 
                     }
 
 			 x = z.join("");
+			 document.getElementById("out").innerHTML = x;
 		
 						 
 			}
 		}) 
 		})}
 console.log(x);
-document.getElementById("out").innerHTML = x;
+
     }
 
 
