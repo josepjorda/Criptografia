@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sistema d'encriptació J-A</title>
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-indigo.min.css" />
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding-top: 15px;
+		}
+		input {
+			width: 95%;
+			height: 30px;
+			border: 0.5;
+			font-family: Helvetica, sans-serif;
+			font-size: 25px;
+			margin-top: 15px;
+			margin-bottom: 10px;
+			padding-left: 5px;
+			padding-right: 5px;
+
+		}
+		button {
+			margin-top: 15px;
+			margin-bottom: 15px;
+			
+		}
+		.final {
+			font-family: "Helvetica", sans-serif;
+			font-size: 25px;
+			font-weight: 500;
+			margin-top: 25px;
+
+		}
+
+	</style>
+</head>
+<body>
+<center>
+	
+	<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" id="in">
+    <label class="mdl-textfield__label" for="in">Missatge a desencriptar...</label>
+  </div>
+</form>
+	
+	
+	<form action="#">
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="num">
+    <label class="mdl-textfield__label" for="num">Nombre clau...</label>
+    <span class="mdl-textfield__error">No és un número.</span>
+  </div>
+</form>
+	
+<button onclick="Desencriptar()" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+  Desencriptar
+</button>
+	
+
+<p id="out" class="final"></p>
+</center>
+<script type="text/javascript">
+function Desencriptar() {
+	var t_in = document.getElementById("in").value;
+		var t_num = document.getElementById("num");
+		var t_out = document.getElementById("out");
+
+	"use strict";
+    var a = t_in;
+    var b = document.getElementById("num").value;
+    var uc_a = ":_><ºª´`!;9876543210%)¨-¡¿=~€¬&#@", 
+        z;
+    b = Number(b); 
+    c = 0; 
+
+
+    	 if (typeof a === "string") {
+        z = a.split(""); 
+        uc_a = uc_a.split(""); 
+        
+        
+        z.forEach(function (v, i) {
+
+            var rui;
+            
+            uc_a.forEach(function (iv, ii) {
+
+                if (v === iv) {
+                    if (c === 0) { 
+                        rui = ii + b; 
+                         
+                       
+                        z[i] = uc_a[rui]; 
+                    }
+
+			 x = z.join("");
+			 console.log(x);
+			}})})}
+		var v02 = x.replace(/@/g, "a");
+		var variable = v02;
+		var v03 = variable.replace(/#/g, "b");
+		var variable = v03;
+		var v04 = variable.replace(/&/g, "c");
+		var variable = v04;
+		var v05 = variable.replace(/¬/g, "d");
+		var variable = v05;
+		var v06 = variable.replace(/€/g, "€");
+		var variable = v06;
+		var v07 = variable.replace(/~/g, "/");
+		var variable = v07;
+		var v08 = variable.replace(/=/g, "=");
+		var variable = v08;
+		var v09 = variable.replace(/¿/g, "¿");
+		var variable = v09;
+		var v10 = variable.replace(/¡/g, "¡");
+		var variable = v10;
+		var v11 = variable.replace(/-/g, "-");
+		var variable = v11;
+		var v12 = variable.replace(/¨/g, "(");
+		var variable = v12;
+		var v13 = variable.replace(/)/g, ")");
+		var variable = v13;
+		var v14 = variable.replace(/%/g, "%");
+		var variable = v14;
+		var v15 = variable.replace(/0/g, "0");
+		var variable = v15;
+		var v16 = variable.replace(/1/g, "1");
+		var variable = v16;
+		var v17 = variable.replace(/2/g, "2");
+		var variable = v17;
+		var v18 = variable.replace(/3/g, "3");
+		var variable = v18;
+		var v19 = variable.replace(/4/g, "4");
+		var variable = v19;
+		var v20 = variable.replace(/5/g, "5");
+		var variable = v20;
+		var v21 = variable.replace(/6/g, "6");
+		var variable = v21;
+		var v22 = variable.replace(/7/g, "7");
+		var variable = v22;
+		var v23 = variable.replace(/8/g, "8");
+		var variable = v23;
+		var v24 = variable.replace(/9/g, "9");
+		var variable = v24;
+		var v25 = variable.replace(/!/g, "!");
+		var variable = v25;
+		var v26 = variable.replace(/;/g, "?");
+		var variable = v26;
+		var v27 = variable.replace(/`/g, "+");
+		var variable = v27;
+		var v28 = variable.replace(/´/g, "*");
+		var variable = v28;
+		var v29 = variable.replace(/]/g, "è");
+		var variable = v29;
+		var v30 = variable.replace(/ª/g, "é");
+		var variable = v30;
+		var v31 = variable.replace(/º/g, "í");
+		var variable = v31;
+		var v32 = variable.replace(/</g, "ò");
+		var variable = v32;
+		var v33 = variable.replace(/>/g, "ó");
+		var variable = v33;
+		var v34 = variable.replace(/_/g, "ú");
+		var variable = v34;
+		var v35 = variable.replace(/:/g, "ç");
+		var variable = v35;
+		
+		document.getElementById("out").innerHTML = variable;
+    }
+
+
+
+
+			
+</script>
+</body>
+</html>
