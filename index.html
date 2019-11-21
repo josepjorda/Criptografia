@@ -41,8 +41,9 @@
 	
 	<form action="#">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-    <input class="mdl-textfield__input" type="text" id="in">
+    <input class="mdl-textfield__input" type="text" id="in" pattern="[a-zàèéíúòóç ]+" onkeyup="this.value = this.value.toLowerCase();">
     <label class="mdl-textfield__label" for="in">Missatge a encriptar...</label>
+    <span class="mdl-textfield__error">No és un caràcter vàlid.</span>
   </div>
 </form>
 	
